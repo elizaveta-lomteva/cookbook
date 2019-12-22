@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    tools:context=".view.IngredientsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.IngredientsFragment">
+
+        <EditText
+            android:id="@+id/edit_text_ingredient"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:hint="Ingredient"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/add_ingredient_button"
+            app:layout_constraintEnd_toStartOf="@+id/add_ingredient_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_ingredient_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/add_ingredient_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_count"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_metric"
+            app:layout_constraintVertical_bias="0.125">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/ingredient_item" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_text_metric"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Metric"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/add_ingredient_button"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_ingredient" />
+
+        <EditText
+            android:id="@+id/edit_text_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:ems="10"
+            android:hint="Count"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_text_metric"
+            app:layout_constraintEnd_toStartOf="@+id/edit_text_metric"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_ingredient"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_ingredient" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

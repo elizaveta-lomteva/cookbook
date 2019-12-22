@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_ingredient"
+        android:icon="@drawable/ic_ingredient"
+        android:title="Ingredients"/>
+    <item
+        android:id="@+id/nav_step"
+        android:icon="@drawable/ic_step"
+        android:title="Steps" />
+
+</menu>
